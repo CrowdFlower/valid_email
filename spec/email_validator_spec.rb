@@ -16,7 +16,7 @@ describe EmailValidator do
   person_class_free_email = Class.new do
     include ActiveModel::Validations
     attr_accessor :email
-    validates :email, :email => {:ban_free_email => true}
+    validates :email, email: {ban_free_email: true}
   end
 
   person_class_disposable_email = Class.new do

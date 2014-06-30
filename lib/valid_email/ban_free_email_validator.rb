@@ -14,6 +14,6 @@ class BanFreeEmailValidator < ActiveModel::EachValidator
     rescue Exception => e
       r = false
     end
-    record.errors.add attribute, (options[:message] || I18n.t(:invalid, :scope => "valid_email.validations.email")) unless r
+    record.errors.add attribute, (options[:message] || I18n.t(:invalid, scope: "valid_email.validations.email")) unless r
   end
 end

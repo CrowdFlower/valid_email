@@ -13,6 +13,12 @@ describe EmailValidator do
     validates :email, :email => {:mx => true}
   end
 
+  person_class_free_email = Class.new do
+    include ActiveModel::Validations
+    attr_accessor :email
+    validates :email, email: {ban_free_email: true}
+  end
+
   person_class_disposable_email = Class.new do
     include ActiveModel::Validations
     attr_accessor :email
@@ -143,8 +149,23 @@ describe EmailValidator do
       end
     end
 
+    describe "validating email from free service" do
+      subject { person_class_free_email.new }
+
+      it "should pass when email is from trusted email services" do
+        subject.email = 'john@arealbusinessdomain.com'
+        subject.valid?.should be_true
+        subject.errors[:email].should be_empty
+      end
+
+      it "should fail when email is from free email services" do
+        subject.email = 'john@123.com'
+        subject.valid?.should be_false
+        subject.errors[:email].should == errors
+      end
+    end
   end
-  
+
   describe "Can allow nil" do
     subject { person_class_nil_allowed.new }
 

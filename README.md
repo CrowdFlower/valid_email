@@ -44,6 +44,10 @@ You can detect disposable accounts
 
     validates :email, :email => {:ban_disposable_email => true, :message => I18n.t('validations.errors.models.user.invalid_email')}
 
+or you can detect free email accounts
+
+    validates :email, :email => {:ban_free_email => true, :message => I18n.t('validations.errors.models.user.invalid_email')}
+
 If you don't want the MX validator stuff, just require the right file
 
     require 'valid_email/email_validator'

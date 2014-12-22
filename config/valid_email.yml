@@ -3048,6 +3048,10 @@ disposable_email_services:
   - 7tags.com
   - 9ox.net
   - a-bc.net
+  - abv.com
+  - abv.net
+  - abv.edu
+  - abv.org
   - acentri.com
   - afrobacon.com
   - ajaxapp.net
@@ -3164,6 +3168,10 @@ disposable_email_services:
   - fleckens.hu
   - fr33mail.info
   - frapmail.com
+  - freemail.com
+  - freemail.net
+  - freemail.edu
+  - freemail.org
   - front14.org
   - fux0ringduh.com
   - garliclife.com
@@ -3175,6 +3183,11 @@ disposable_email_services:
   - ghosttexter.de
   - girlsundertheinfluence.com
   - gishpuppy.com
+  - gmail.com
+  - googlemail.com
+  - googlemail.net
+  - googlemail.edu
+  - googlemail.org
   - gowikibooks.com
   - gowikicampus.com
   - gowikicars.com
@@ -3205,8 +3218,13 @@ disposable_email_services:
   - hatespam.org
   - hidemail.de
   - hochsitze.com
+  - hotmail.com
   - hotpop.com
   - hulapla.de
+  - icloud.com
+  - icloud.net
+  - icloud.org
+  - icloud.edu
   - ieatspam.eu
   - ieatspam.info
   - ihateyoualot.info
@@ -3244,9 +3262,17 @@ disposable_email_services:
   - kurzepost.de
   - letthemeatspam.com
   - lhsdv.com
+  - libero.com
+  - libero.net
+  - libero.org
+  - libero.edu
   - lifebyfood.com
   - link2mail.net
   - litedrop.com
+  - live.com
+  - live.net
+  - live.edu
+  - live.org
   - lol.ovpn.to
   - lookugly.com
   - lopl.co.cc
@@ -3254,6 +3280,10 @@ disposable_email_services:
   - lr78.com
   - m4ilweb.info
   - maboard.com
+  - mail.com
+  - mail.net
+  - mail.org
+  - mail.edu
   - mail-temporaire.fr
   - mail.by
   - mail.mezimages.net
@@ -3287,6 +3317,10 @@ disposable_email_services:
   - mailzilla.com
   - mailzilla.org
   - mbx.cc
+  - me.com
+  - me.net
+  - me.org
+  - me.edu
   - mega.zik.dj
   - meinspamschutz.de
   - meltmail.com
@@ -3343,6 +3377,10 @@ disposable_email_services:
   - otherinbox.com
   - ourklips.com
   - outlawspam.com
+  - outlook.com
+  - outlook.net
+  - outlook.org
+  - outlook.edu
   - ovpn.to
   - owlpic.com
   - pancakemail.com
@@ -3362,12 +3400,20 @@ disposable_email_services:
   - rcpt.at
   - recode.me
   - recursor.net
+  - redifmail.com
+  - redifmail.net
+  - redifmail.edu
+  - redifmail.org
   - regbypass.com
   - regbypass.comsafe-mail.net
   - rejectmail.com
   - rhyta.com
   - rklips.com
   - rmqkr.net
+  - rocketmail.com
+  - rocketmail.net
+  - rocketmail.edu
+  - rocketmail.org
   - rppkn.com
   - rtrtr.com
   - s0ny.net
@@ -3393,6 +3439,10 @@ disposable_email_services:
   - sofimail.com
   - sofort-mail.de
   - sogetthis.com
+  - sogou.com
+  - sogou.net
+  - sogou.org
+  - sogou.edu
   - soodonims.com
   - spam.la
   - spam.su
@@ -3525,7 +3575,16 @@ disposable_email_services:
   - xents.com
   - xmaily.com
   - xoxy.net
+  - yahoo.com
+  - yandex.com
+  - yandex.net
+  - yandex.edu
+  - yandex.org
   - yep.it
+  - ymail.com
+  - ymail.net
+  - ymail.org
+  - ymail.edu
   - yogamaven.com
   - yopmail.com
   - yopmail.fr

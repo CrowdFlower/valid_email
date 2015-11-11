@@ -3175,7 +3175,6 @@ disposable_email_services:
   - ghosttexter.de
   - girlsundertheinfluence.com
   - gishpuppy.com
-  - gmail.com
   - gowikibooks.com
   - gowikicampus.com
   - gowikicars.com
@@ -3537,3 +3536,23 @@ disposable_email_services:
   - zippymail.info
   - zoaxe.com
   - zoemail.org
+  # START
+  # see Make : app/assets/javascripts/akon/akon_user_form.js.coffee
+  - icloud.com
+  - me.com
+  - abv.com
+  - ymail.com
+  - mail.com
+  - gmail.com
+  - yahoo.com
+  - hotmail.com
+  - freemail.com
+  - outlook.com
+  - sogou.com
+  - googlemail.com
+  - rocketmail.com
+  - yandex.com
+  - redifmail.com
+  - libero.com
+  - live.com
+  # END

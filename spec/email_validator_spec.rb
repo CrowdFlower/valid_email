@@ -148,10 +148,13 @@ describe EmailValidator do
         subject.errors[:email].should == errors
       end
 
-      it "should fail when email is gmail" do
-        subject.email = 'john@gmail.com'
-        subject.valid?.should be_falsey
-        subject.errors[:email].should == errors
+      # see Make : app/assets/javascripts/akon/akon_user_form.js.coffee
+      ['icloud','me','abv','ymail','mail','gmail','yahoo','hotmail','freemail','outlook','sogou','googlemail','rocketmail','yandex','redifmail','libero','live'].each do |provider|
+        it "should fail when email is #{provider}" do
+          subject.email = "john@#{provider}.com"
+          subject.valid?.should be_falsey
+          subject.errors[:email].should == errors
+        end
       end
     end
 

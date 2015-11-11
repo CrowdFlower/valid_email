@@ -147,6 +147,12 @@ describe EmailValidator do
         subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
+
+      it "should fail when email is gmail" do
+        subject.email = 'john@gmail.com'
+        subject.valid?.should be_falsey
+        subject.errors[:email].should == errors
+      end
     end
 
     describe "validating email from free service" do

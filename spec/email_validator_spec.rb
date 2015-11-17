@@ -61,37 +61,37 @@ describe EmailValidator do
       subject { person_class.new }
 
       it "should fail when email empty" do
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
 
       it "should fail when email is not valid" do
         subject.email = 'joh@doe'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
 
       it "should fail when email is valid with information" do
         subject.email = '"John Doe" <john@doe.com>'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
 
       it "should pass when email is simple email address" do
         subject.email = 'john@doe.com'
-        subject.valid?.should be_true
+        subject.valid?.should be_truthy
         subject.errors[:email].should be_empty
       end
 
       it "should fail when email is simple email address not stripped" do
         subject.email = 'john@doe.com            '
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
 
       it "should fail when passing multiple simple email addresses" do
         subject.email = 'john@doe.com, maria@doe.com'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
 
@@ -102,19 +102,19 @@ describe EmailValidator do
 
       it "should pass when email domain has MX record" do
         subject.email = 'john@gmail.com'
-        subject.valid?.should be_true
+        subject.valid?.should be_truthy
         subject.errors[:email].should be_empty
       end
 
       it "should fail when email domain has no MX record" do
         subject.email = 'john@subdomain.rubyonrails.org'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
 
       it "should fail when domain does not exists" do
         subject.email = 'john@nonexistentdomain.abc'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
     end
@@ -138,14 +138,23 @@ describe EmailValidator do
 
       it "should pass when email from trusted email services" do
         subject.email = 'john@mail.ru'
-        subject.valid?.should be_true
+        subject.valid?.should be_truthy
         subject.errors[:email].should be_empty
       end
 
       it "should fail when email from disposable email services" do
         subject.email = 'john@grr.la'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
+      end
+
+      # see Make : app/assets/javascripts/akon/akon_user_form.js.coffee
+      ['icloud','me','abv','ymail','mail','gmail','yahoo','hotmail','freemail','outlook','sogou','googlemail','rocketmail','yandex','redifmail','libero','live'].each do |provider|
+        it "should fail when email is #{provider}" do
+          subject.email = "john@#{provider}.com"
+          subject.valid?.should be_falsey
+          subject.errors[:email].should == errors
+        end
       end
     end
 
@@ -154,13 +163,13 @@ describe EmailValidator do
 
       it "should pass when email is from trusted email services" do
         subject.email = 'john@arealbusinessdomain.com'
-        subject.valid?.should be_true
+        subject.valid?.should be_truthy
         subject.errors[:email].should be_empty
       end
 
       it "should fail when email is from free email services" do
         subject.email = 'john@123.com'
-        subject.valid?.should be_false
+        subject.valid?.should be_falsey
         subject.errors[:email].should == errors
       end
     end
